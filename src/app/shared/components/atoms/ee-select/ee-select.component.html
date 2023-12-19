@@ -1,0 +1,14 @@
+<div class="select">
+  <label [for]="dynamicFor">{{ dynamicLabelText }}</label>
+  <select
+    [name]="dynamicName"
+    [id]="dynamicId"
+    [class]="dynamicClass"
+    (change)="onSelect($event)"
+  >
+    @for (exchange of allExchange; track exchange) {
+    <option [value]="exchange">{{ exchange }}</option>
+    } @empty { Empty list of exchange }
+  </select>
+  <div></div>
+</div>

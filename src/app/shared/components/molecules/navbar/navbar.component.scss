@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  @media (max-width: 576px) {
+    margin-bottom: 2rem;
+  }
+
+  .navbar-image {
+    @media (max-width: 576px) {
+      max-width: 165px;
+    }
+
+    line-height: normal;
+  }
+
+  .navbar-text-login {
+    font-size: 1rem;
+    font-weight: bold;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--color-secondary);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<div class="login-modal">
+  <div class="modal-content">
+    <app-ee-image
+      class="modal-content-logo"
+      src="../../../../../assets/logo.svg"
+      alt="Logo"
+    />
+    <hr class="divider" />
+    <form action="">
+      <div class="login-account">
+        <app-ee-text class="login-account-text" text="Login Account" />
+        <div class="login-account-inputs">
+          <ee-input
+            class="login-account-input"
+            dynamicType="email"
+            dynamicName="email"
+            dynamicId="email"
+            dynamicPlaceholder="Email ID"
+            dynamicClass="loginModalInputs"
+          />
+          <ee-input
+            class="login-account-input"
+            dynamicType="password"
+            dynamicName="password"
+            dynamicId="password"
+            dynamicPlaceholder="Password"
+            dynamicClass="loginModalInputs"
+          />
+        </div>
+        <div class="modal-info">
+          <app-ee-text class="text" text="I don't have account" />
+          <app-ee-text class="text" text="Forgot your password?" />
+        </div>
+      </div>
+      <div>
+        <app-ee-button
+          buttonText="LOGIN"
+          dynamicType="submit"
+          dynamicClass="loginModalButton"
+        />
+      </div>
+    </form>
+  </div>
+</div>

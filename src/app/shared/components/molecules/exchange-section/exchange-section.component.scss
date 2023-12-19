@@ -1,0 +1,94 @@
+.exchange-calculation {
+  padding: 5% 10%;
+  margin-top: 4rem;
+  .exchange-calculation-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media (max-width: 576px) {
+      justify-content: center;
+    }
+
+    .convert-image {
+      max-width: 60px;
+      margin-right: 0.5rem;
+    }
+
+    .title-text {
+      font-size: 28px;
+      font-weight: bold;
+      color: var(--color-dark);
+    }
+  }
+
+  .exchange-calculation-form {
+    margin-top: 2rem;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: space-between;
+
+      .form-inputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 2rem;
+
+        @media (max-width: 576px) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .form-input {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex: 1;
+          gap: 10px;
+
+          @media (max-width: 576px) {
+            width: 100%;
+          }
+
+          .input {
+            width: 100%;
+          }
+        }
+
+        .form-exchange-icon {
+          width: 26px;
+          align-self: flex-end;
+
+          @media (max-width: 576px) {
+            align-self: center;
+          }
+
+          .image {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+
+    .convert-button {
+      display: flex;
+      justify-content: flex-end;
+
+      @media (max-width: 576px) {
+        align-self: center;
+        width: 100%;
+      }
+    }
+  }
+}

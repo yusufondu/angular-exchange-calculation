@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import "fonts";
+
+:root {
+  --color-primary: #63a022;
+  --color-secondary: #87c241;
+  --color-light: #dfedcf;
+  --color-dark: #354e57;
+  --color-natural: #848f93;
+  --color-cloud: #eef3f4;
+  --color-white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: ProximaNova;
+  line-height: 1.2;
+}

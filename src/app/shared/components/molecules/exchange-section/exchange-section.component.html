@@ -1,0 +1,74 @@
+<div class="exchange-calculation">
+  <div class="exchange-calculation-title">
+    <app-ee-image
+      class="convert-image"
+      src="../../../../../assets/convert-icon.svg"
+      alt="Convert Icon"
+    />
+    <app-ee-text class="title-text" text="Convert Fund" />
+  </div>
+  <div class="exchange-calculation-form">
+    <div class="form">
+      <div class="form-inputs">
+        <div class="form-input">
+          <ee-input
+            class="input"
+            dynamicFor="amount"
+            dynamicId="amount"
+            dynamicLabelText="Amount"
+            dynamicName="amount"
+            dynamicType="number"
+            dynamicClass="numberInput"
+            dynamicPlaceholder=" {{ this.currencySymbol }} 10.00"
+            (newAmount)="onNewAmount($event)"
+          />
+        </div>
+
+        <div class="form-input">
+          <ee-select
+            (selectValue)="selectValue($event)"
+            class="input"
+            dynamicFor="fromCurrency"
+            dynamicLabelText="From"
+            dynamicName="fromCurrency"
+            dynamicId="fromCurrency"
+            dynamicClass="selectInput"
+            (sendEvent)="onsendEvent($event)"
+            (selectedFromOptionText)="onselectedFromOptionText($event)"
+            [allExchange]="allExchange"
+          />
+        </div>
+        <div class="form-exchange-icon">
+          <app-ee-image
+            class="image"
+            src="../../../../../assets/exchange-icon.svg"
+            alt="exchange icon"
+          />
+        </div>
+        <div class="form-input">
+          <ee-select
+            (selectValue)="selectValue($event)"
+            (sendEvent)="onsendEvent($event)"
+            class="input"
+            dynamicFor="toCurrency"
+            dynamicLabelText="To"
+            dynamicName="toCurrency"
+            dynamicId="toCurrency"
+            dynamicClass="selectInput"
+            (toCurrencyValue)="ontoCurrencyValue($event)"
+            (selectedToOptionText)="onselectedToOptionText($event)"
+            [allExchange]="allExchange"
+          />
+        </div>
+      </div>
+    </div>
+
+    <app-ee-button
+      (click)="handleConvert()"
+      class="convert-button"
+      buttonText="Convert"
+      dynamicType="submit"
+      dynamicClass="convertButton"
+    />
+  </div>
+</div>

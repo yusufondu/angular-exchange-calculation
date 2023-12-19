@@ -1,0 +1,11 @@
+.select {
+  .selectInput {
+    width: 100%;
+    border: 1px solid var(--color-dark);
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: var(--color-secondary) 0px 2px 10px -5px,
+      var(--color-secondary) 0px 1px 1px -1px;
+    outline: none;
+  }
+}

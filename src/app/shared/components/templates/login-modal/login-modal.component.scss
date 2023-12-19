@@ -1,0 +1,75 @@
+.login-modal {
+  padding: 4rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+
+  @media (max-width: 576px) {
+    padding: 2rem;
+    min-width: 280px;
+  }
+
+  .modal-content {
+    .modal-content-logo {
+      margin-bottom: 10px;
+    }
+
+    .divider {
+      margin-top: 1.5rem;
+      border-bottom: 2px solid var(--color-secondary);
+    }
+
+    form {
+      .login-account {
+        margin: 2rem 0;
+        .login-account-text {
+          color: var(--color-primary);
+          font-size: 28px;
+          margin: 2rem 0;
+          font-weight: bolder;
+
+          @media (max-width: 576px) {
+            font-size: 22px;
+          }
+        }
+
+        .login-account-inputs {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          flex: 1;
+          gap: 1rem;
+          margin: 2rem 0;
+
+          .login-account-input {
+            width: 100%;
+          }
+        }
+
+        .modal-info {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 2rem;
+
+          .text {
+            margin: 0.5rem 0;
+
+            &:hover {
+              cursor: pointer;
+              color: var(--color-secondary);
+            }
+          }
+        }
+      }
+    }
+  }
+}
