@@ -24,20 +24,26 @@
           />
         </div>
 
+        @for (selectBox of selectBoxes; track selectBox.dynamicId) {
         <div class="form-input">
           <ee-select
-            (selectValue)="selectValue($event)"
-            class="input"
-            dynamicFor="fromCurrency"
-            dynamicLabelText="From"
-            dynamicName="fromCurrency"
-            dynamicId="fromCurrency"
-            dynamicClass="selectInput"
-            (sendEvent)="onsendEvent($event)"
-            (selectedFromOptionText)="onselectedFromOptionText($event)"
             [allExchange]="allExchange"
+            class="input"
+            [dynamicFor]="selectBox.dynamicFor"
+            [dynamicLabelText]="selectBox.dynamicLabelText"
+            [dynamicName]="selectBox.dynamicName"
+            [dynamicId]="selectBox.dynamicId"
+            [dynamicClass]="selectBox.dynamicClass"
+            (sendEvent)="onsendEvent($event)"
+            (selectValue)="selectValue($event)"
+            (selectedFromOptionText)="onselectedFromOptionText($event)"
+            (selectedToOptionText)="onselectedToOptionText($event)"
+            (toCurrencyValue)="ontoCurrencyValue($event)"
           />
         </div>
+
+        @if (selectBox.dynamicId === 'fromCurrency') {
+
         <div class="form-exchange-icon">
           <app-ee-image
             class="image"
@@ -45,21 +51,7 @@
             alt="exchange icon"
           />
         </div>
-        <div class="form-input">
-          <ee-select
-            (selectValue)="selectValue($event)"
-            (sendEvent)="onsendEvent($event)"
-            class="input"
-            dynamicFor="toCurrency"
-            dynamicLabelText="To"
-            dynamicName="toCurrency"
-            dynamicId="toCurrency"
-            dynamicClass="selectInput"
-            (toCurrencyValue)="ontoCurrencyValue($event)"
-            (selectedToOptionText)="onselectedToOptionText($event)"
-            [allExchange]="allExchange"
-          />
-        </div>
+        } }
       </div>
     </div>
 

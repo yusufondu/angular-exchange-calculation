@@ -6,6 +6,14 @@ import { InputComponent } from '../../atoms/ee-input/ee-input.component';
 import { SelectComponent } from '../../atoms/ee-select/ee-select.component';
 import { HttpClient } from '@angular/common/http';
 
+interface SelectBoxes {
+  dynamicFor: string;
+  dynamicLabelText: string;
+  dynamicName: string;
+  dynamicId: string;
+  dynamicClass: string;
+}
+
 @Component({
   selector: 'exchange-section',
   standalone: true,
@@ -30,6 +38,22 @@ export class ExchangeSectionComponent {
   selectedToOptionText: string = '';
   allExchange: Array<any> = [];
   exchangeRatesObject: any = {};
+  selectBoxes: SelectBoxes[] = [
+    {
+      dynamicFor: 'fromCurrency',
+      dynamicLabelText: 'From',
+      dynamicName: 'fromCurrency',
+      dynamicId: 'fromCurrency',
+      dynamicClass: 'selectInput',
+    },
+    {
+      dynamicFor: 'toCurrency',
+      dynamicLabelText: 'To',
+      dynamicName: 'toCurrency',
+      dynamicId: 'toCurrency',
+      dynamicClass: 'selectInput',
+    },
+  ];
 
   @Input() currency: string = 'USD';
   @Input() currencySymbol: string = '$';
