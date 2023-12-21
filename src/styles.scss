@@ -8,6 +8,13 @@
   --color-natural: #848f93;
   --color-cloud: #eef3f4;
   --color-white: #ffffff;
+
+  --font-family: ProximaNova;
+
+  --button-fontSize: 15px;
+  --button-fontWeight: 600px;
+  --button-borderRadius: 5px;
+  --button-padding: 8px 20px;
 }
 
 * {
@@ -20,6 +27,6 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: ProximaNova;
+  font-family: var(--font-family);
   line-height: 1.2;
 }

@@ -1,9 +1,9 @@
-.textButton {
-  padding: 8px 20px;
-  font-size: 15px;
-  font-weight: 600;
-  font-family: ProximaNova;
-  border-radius: 5px;
+.button {
+  padding: var(--button-padding);
+  font-size: var(--button-fontSize);
+  font-weight: var(--button-fontWeight);
+  font-family: var(--font-family);
+  border-radius: var(--button-borderRadius);
 }
 
 .header-button {
