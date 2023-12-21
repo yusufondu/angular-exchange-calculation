@@ -8,6 +8,7 @@ import { ExchangeSectionComponent } from './shared/components/molecules/exchange
 import { LoginModalComponent } from './shared/components/templates/login-modal/login-modal.component';
 import { SelectComponent } from './shared/components/atoms/ee-select/ee-select.component';
 import { CalculationComponent } from './shared/components/templates/calculation/calculation.component';
+import { OverlayComponent } from './shared/components/templates/overlay/overlay.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { CalculationComponent } from './shared/components/templates/calculation/
     LoginModalComponent,
     SelectComponent,
     CalculationComponent,
+    OverlayComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -11,18 +11,13 @@
       (handleResult)="onhandleResult($event)"
     />
     <calculation
+      *ngIf="showCalculation"
       [amount]="amount"
       [selectedFromOptionText]="selectedFromOptionText"
       [selectedToOptionText]="selectedToOptionText"
-      *ngIf="showCalculation"
       [result]="result"
     />
-
-    <div
-      *ngIf="isOverlayVisible"
-      class="overlay"
-      (click)="onOverlayClick()"
-    ></div>
+    <overlay *ngIf="isOverlayVisible" (click)="onOverlayClick()" />
     <login-modal *ngIf="isLoginModalVisible" />
   </div>
 </main>
